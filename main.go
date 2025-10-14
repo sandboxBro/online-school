@@ -66,6 +66,17 @@ func main() {
 		Courses:  []models.Course{frontendCourse, Coursego},
 		Teachers: []models.Teacher{t1,t2},
 	}  
-	fmt.Println(school)
+	
+	// Функция для вывода информации
+		for _, course := range school.Courses {
+			fmt.Println( "курс:", course.Title)
+			for _, lesson := range course.Lessons { 
+			fmt.Println("-- урок:", lesson.Title)
+			fmt.Println("---- преподаватель:", lesson.Teacher.FirstName, lesson.Teacher.LastName) 
+			} 
+			fmt.Println("--------")
+
+		}
+	
 
 }
