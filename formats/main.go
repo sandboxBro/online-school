@@ -42,6 +42,3 @@ func main() {
 	fmt.Println("Сервер запущен на http://127.0.0.1:8080 ...")
 	http.ListenAndServe(":8080", nil)
 }
-
-	
-
